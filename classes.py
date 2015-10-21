@@ -26,15 +26,20 @@ class player():
 
     def move(self,direction):
         #set initial speed according to direction
+		#speedx and speedy changing variables that change position
 
         if direction == 'up':
             self.speedy = -5
+
         elif direction == 'down':
             self.speedy = 5
-        elif direction == 'left':
+
+        elif direction == 'left':              #changes
             self.speedx = -5
+
         elif direction == 'right':
-            self.speedx = 5      
+            self.speedx = 5  
+
 
     def inertia(self):
         #constantly reduce speed till it is zero for smooth motion
@@ -59,4 +64,16 @@ class player():
 
     def interact():
         pass
-    
+
+
+class wall():
+    #initialising wall variables
+
+    def __init__(self):
+        self.x = 0
+        self.y = 0
+        self.h = 40
+        self.w = 40
+        self.collide = False
+        self.image = C:\Users\ashok\Desktop\download.jpg
+        self.image = pygame.trabsform.scale(self.image, (self.wall_h,self.wall_w))

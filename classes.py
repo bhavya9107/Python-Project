@@ -63,12 +63,30 @@ class player():
         pass
     
 
+class line():
+
+    def __init__(self,x1,y1,x2,y2):
+
+        self.name = 'line'
+        self.id = 2
+
+        self.x1 = x1
+        self.x2 = x2
+        self.y1 = y1
+        self.y2 = y2
+        self.slope = 0.0
+        self.length = 0.0
+        self.is_vertical = False
+        self.width = 1
+        self.color = (0,0,0)
+
 class wall():
 
     def __init__(self,x,y):
         #initialize all variables
 
         self.name = 'wall'
+        self.id = 1
 
         self.x = x
         self.y = y
@@ -87,6 +105,7 @@ class door():
         #initialize all variables
 
         self.name = 'door'
+        self.id = 3
 
         self.x = x
         self.y = y
@@ -132,3 +151,10 @@ class gamemap():
         self.mapx += self.mapspeedx
         self.mapy += self.mapspeedy
 
+
+class point():
+    #temp class
+    def __init__(self,x,y):
+
+        self.x = x
+        self.y = y
